@@ -21,7 +21,6 @@ export default class ParentContainer extends React.Component {
 		axios.get( "https://cors-anywhere.herokuapp.com/"+
 			"https://ltv-data-api.herokuapp.com/api/v1/records.json?email=doesmith@example.com").
 		then(response =>
-
 			this.setState({
 			name: response.data.first_name + response.data.last_name,
 			description: response.data.description,
@@ -35,7 +34,6 @@ export default class ParentContainer extends React.Component {
 		.catch(err => console.log("ERR", err));
 	}
 	render() {
-		console.log("STATE", this.state);
 		const { name, description, address, phoneNumbers, email, relatives } = this.state;
 		return(
 			<div>

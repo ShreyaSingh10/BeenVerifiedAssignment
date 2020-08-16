@@ -14,13 +14,11 @@ export default class ReverseEmail extends React.Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log("EMAIL")
 		this.props.getEmailId(this.state.email);
 		this.setState({email:''});
 	}
 
 	render() {
-		console.log("this.state", this.state);
 		return(
 			<form onSubmit={this.handleSubmit}>
 				<input 
